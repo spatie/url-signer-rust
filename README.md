@@ -1,4 +1,4 @@
-# spatie-url-signer
+# Create signed URLs with a limited lifetime
 
 [![Latest version on crates.io](https://img.shields.io/crates/v/spatie-url-signer.svg?style=flat-square)](https://crates.io/crates/spatie-url-signer)
 [![Tests](https://img.shields.io/github/actions/workflow/status/spatie/url-signer-rust/ci.yml?branch=main&style=flat-square)](https://github.com/spatie/url-signer-rust/actions/workflows/ci.yml)
