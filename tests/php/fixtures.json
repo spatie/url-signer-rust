@@ -1,0 +1,1846 @@
+[
+  [
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b",
+      "key": "random_monkey",
+      "override_key": null,
+      "expires_name": "until",
+      "signature_name": "hash",
+      "md5": false,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?until=4000000000&hash=f4c8befea66a5d54b1099ac0f9bd7e96b0b7f171ecdb36282094015c9fb18e09",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?until=4000000000&hash=f4c8befea66a5d54b1099ac0f9bd7e96b0b7f171ecdb36282094015c9fb18e09&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?until=4000000000&hash=f4c8befea66a5d54b1099ac0f9bd7e96b0b7f171ecdb36282094015c9fb18e09&hash[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?until=4000000000&hash=f4c8befea66a5d54b1099ac0f9bd7e96b0b7f171ecdb36282094015c9fb18e09&until=1e10",
+        "HTTPS://MyApp.com:443/a/../b?until=4000000000&hash=f4c8befea66a5d54b1099ac0f9bd7e96b0b7f171ecdb36282094015c9fb18e09#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?",
+      "key": "random_monkey",
+      "override_key": "",
+      "expires_name": "expires",
+      "signature_name": "signature",
+      "md5": false,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?expires=4000000000&signature=567aa01514431d4d9116932865205f42b5e9f26d7fbd63bbbab5582f32e07add",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?expires=4000000000&signature=567aa01514431d4d9116932865205f42b5e9f26d7fbd63bbbab5582f32e07add&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?expires=4000000000&signature=567aa01514431d4d9116932865205f42b5e9f26d7fbd63bbbab5582f32e07add&signature[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?expires=4000000000&signature=567aa01514431d4d9116932865205f42b5e9f26d7fbd63bbbab5582f32e07add&expires=1e10",
+        "HTTPS://MyApp.com:443/a/../b?expires=4000000000&signature=567aa01514431d4d9116932865205f42b5e9f26d7fbd63bbbab5582f32e07add#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?foo=bar&baz=qux",
+      "key": "random_monkey",
+      "override_key": "custom-key",
+      "expires_name": "until",
+      "signature_name": "hash",
+      "md5": false,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?foo=bar&baz=qux&until=4000000000&hash=92fcf900c730c120944f7599631380e5e65f9a9f6fe586f0d0c3aa7a0d3f8fbb",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?foo=bar&baz=qux&until=4000000000&hash=92fcf900c730c120944f7599631380e5e65f9a9f6fe586f0d0c3aa7a0d3f8fbb&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?foo=bar&baz=qux&until=4000000000&hash=92fcf900c730c120944f7599631380e5e65f9a9f6fe586f0d0c3aa7a0d3f8fbb&hash[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?foo=bar&baz=qux&until=4000000000&hash=92fcf900c730c120944f7599631380e5e65f9a9f6fe586f0d0c3aa7a0d3f8fbb&until=1e10",
+        "HTTPS://MyApp.com:443/a/../b?foo=bar&baz=qux&until=4000000000&hash=92fcf900c730c120944f7599631380e5e65f9a9f6fe586f0d0c3aa7a0d3f8fbb#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?x=a%20b&y=a+b&z=%2B",
+      "key": "random_monkey",
+      "override_key": null,
+      "expires_name": "expires",
+      "signature_name": "signature",
+      "md5": false,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?x=a+b&y=a+b&z=%2B&expires=4000000000&signature=49abe4e6a14067b0d1ae315da13d153a36a44e25a640835304099840157123d5",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?x=a+b&y=a+b&z=%2B&expires=4000000000&signature=49abe4e6a14067b0d1ae315da13d153a36a44e25a640835304099840157123d5&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?x=a+b&y=a+b&z=%2B&expires=4000000000&signature=49abe4e6a14067b0d1ae315da13d153a36a44e25a640835304099840157123d5&signature[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?x=a+b&y=a+b&z=%2B&expires=4000000000&signature=49abe4e6a14067b0d1ae315da13d153a36a44e25a640835304099840157123d5&expires=1e10",
+        "HTTPS://MyApp.com:443/a/../b?x=a+b&y=a+b&z=%2B&expires=4000000000&signature=49abe4e6a14067b0d1ae315da13d153a36a44e25a640835304099840157123d5#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?x=~!*'()@:/?=\u00e9",
+      "key": "random_monkey",
+      "override_key": "",
+      "expires_name": "until",
+      "signature_name": "hash",
+      "md5": false,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?x=%7E%21%2A%27%28%29%40%3A%2F%3F%3D%C3%A9&until=4000000000&hash=cc47fac3070f84cd6c62c031cd5cbb5a336c0f9591aeb00485a1a4b9b5147557",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?x=%7E%21%2A%27%28%29%40%3A%2F%3F%3D%C3%A9&until=4000000000&hash=cc47fac3070f84cd6c62c031cd5cbb5a336c0f9591aeb00485a1a4b9b5147557&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?x=%7E%21%2A%27%28%29%40%3A%2F%3F%3D%C3%A9&until=4000000000&hash=cc47fac3070f84cd6c62c031cd5cbb5a336c0f9591aeb00485a1a4b9b5147557&hash[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?x=%7E%21%2A%27%28%29%40%3A%2F%3F%3D%C3%A9&until=4000000000&hash=cc47fac3070f84cd6c62c031cd5cbb5a336c0f9591aeb00485a1a4b9b5147557&until=1e10",
+        "HTTPS://MyApp.com:443/a/../b?x=%7E%21%2A%27%28%29%40%3A%2F%3F%3D%C3%A9&until=4000000000&hash=cc47fac3070f84cd6c62c031cd5cbb5a336c0f9591aeb00485a1a4b9b5147557#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?x=first&y=middle&x=last",
+      "key": "random_monkey",
+      "override_key": "custom-key",
+      "expires_name": "expires",
+      "signature_name": "signature",
+      "md5": false,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?x=last&y=middle&expires=4000000000&signature=21043585a41c40c44482aa9695976fdab80d8bf58a39d5b0536fde445764ddf8",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?x=last&y=middle&expires=4000000000&signature=21043585a41c40c44482aa9695976fdab80d8bf58a39d5b0536fde445764ddf8&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?x=last&y=middle&expires=4000000000&signature=21043585a41c40c44482aa9695976fdab80d8bf58a39d5b0536fde445764ddf8&signature[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?x=last&y=middle&expires=4000000000&signature=21043585a41c40c44482aa9695976fdab80d8bf58a39d5b0536fde445764ddf8&expires=1e10",
+        "HTTPS://MyApp.com:443/a/../b?x=last&y=middle&expires=4000000000&signature=21043585a41c40c44482aa9695976fdab80d8bf58a39d5b0536fde445764ddf8#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?x[]=a&x[]=b",
+      "key": "random_monkey",
+      "override_key": null,
+      "expires_name": "until",
+      "signature_name": "hash",
+      "md5": false,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?x%5B0%5D=a&x%5B1%5D=b&until=4000000000&hash=0fe30d11f20d77541a749119d587a38b3d4cbad2f05fdc2e5d35ed45bae954ef",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?x%5B0%5D=a&x%5B1%5D=b&until=4000000000&hash=0fe30d11f20d77541a749119d587a38b3d4cbad2f05fdc2e5d35ed45bae954ef&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?x%5B0%5D=a&x%5B1%5D=b&until=4000000000&hash=0fe30d11f20d77541a749119d587a38b3d4cbad2f05fdc2e5d35ed45bae954ef&hash[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?x%5B0%5D=a&x%5B1%5D=b&until=4000000000&hash=0fe30d11f20d77541a749119d587a38b3d4cbad2f05fdc2e5d35ed45bae954ef&until=1e10",
+        "HTTPS://MyApp.com:443/a/../b?x%5B0%5D=a&x%5B1%5D=b&until=4000000000&hash=0fe30d11f20d77541a749119d587a38b3d4cbad2f05fdc2e5d35ed45bae954ef#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?x[a][b]=c&x[a][d]=e",
+      "key": "random_monkey",
+      "override_key": "",
+      "expires_name": "expires",
+      "signature_name": "signature",
+      "md5": false,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?x%5Ba%5D%5Bb%5D=c&x%5Ba%5D%5Bd%5D=e&expires=4000000000&signature=8d29e1f9fa9b7b8cbe788fcdaf7fa73cfd057c048454d20c882e1a3866c87f2d",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?x%5Ba%5D%5Bb%5D=c&x%5Ba%5D%5Bd%5D=e&expires=4000000000&signature=8d29e1f9fa9b7b8cbe788fcdaf7fa73cfd057c048454d20c882e1a3866c87f2d&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?x%5Ba%5D%5Bb%5D=c&x%5Ba%5D%5Bd%5D=e&expires=4000000000&signature=8d29e1f9fa9b7b8cbe788fcdaf7fa73cfd057c048454d20c882e1a3866c87f2d&signature[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?x%5Ba%5D%5Bb%5D=c&x%5Ba%5D%5Bd%5D=e&expires=4000000000&signature=8d29e1f9fa9b7b8cbe788fcdaf7fa73cfd057c048454d20c882e1a3866c87f2d&expires=1e10",
+        "HTTPS://MyApp.com:443/a/../b?x%5Ba%5D%5Bb%5D=c&x%5Ba%5D%5Bd%5D=e&expires=4000000000&signature=8d29e1f9fa9b7b8cbe788fcdaf7fa73cfd057c048454d20c882e1a3866c87f2d#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?a.b=one&a+b=two",
+      "key": "random_monkey",
+      "override_key": "custom-key",
+      "expires_name": "until",
+      "signature_name": "hash",
+      "md5": false,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?a_b=two&until=4000000000&hash=e80176b8ff81ae58063737ba911eb407ff5459d04bc4691277f031d5d54d6ba5",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?a_b=two&until=4000000000&hash=e80176b8ff81ae58063737ba911eb407ff5459d04bc4691277f031d5d54d6ba5&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?a_b=two&until=4000000000&hash=e80176b8ff81ae58063737ba911eb407ff5459d04bc4691277f031d5d54d6ba5&hash[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?a_b=two&until=4000000000&hash=e80176b8ff81ae58063737ba911eb407ff5459d04bc4691277f031d5d54d6ba5&until=1e10",
+        "HTTPS://MyApp.com:443/a/../b?a_b=two&until=4000000000&hash=e80176b8ff81ae58063737ba911eb407ff5459d04bc4691277f031d5d54d6ba5#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?x=%FF%00%FE&%FF=bytes",
+      "key": "random_monkey",
+      "override_key": null,
+      "expires_name": "expires",
+      "signature_name": "signature",
+      "md5": false,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?x=%FF%00%FE&%FF=bytes&expires=4000000000&signature=c0068aa3b848fcef33bb74a9dc0104d3cb9a3d3b03bedc1d30310ba2f9512752",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?x=%FF%00%FE&%FF=bytes&expires=4000000000&signature=c0068aa3b848fcef33bb74a9dc0104d3cb9a3d3b03bedc1d30310ba2f9512752&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?x=%FF%00%FE&%FF=bytes&expires=4000000000&signature=c0068aa3b848fcef33bb74a9dc0104d3cb9a3d3b03bedc1d30310ba2f9512752&signature[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?x=%FF%00%FE&%FF=bytes&expires=4000000000&signature=c0068aa3b848fcef33bb74a9dc0104d3cb9a3d3b03bedc1d30310ba2f9512752&expires=1e10",
+        "HTTPS://MyApp.com:443/a/../b?x=%FF%00%FE&%FF=bytes&expires=4000000000&signature=c0068aa3b848fcef33bb74a9dc0104d3cb9a3d3b03bedc1d30310ba2f9512752#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?x=%&y=%2G",
+      "key": "random_monkey",
+      "override_key": "",
+      "expires_name": "until",
+      "signature_name": "hash",
+      "md5": false,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?x=%25&y=%252G&until=4000000000&hash=f16233955fc64e98e51bc902df38b986eb6dd34d150528bfc1823380c44a3bc5",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?x=%25&y=%252G&until=4000000000&hash=f16233955fc64e98e51bc902df38b986eb6dd34d150528bfc1823380c44a3bc5&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?x=%25&y=%252G&until=4000000000&hash=f16233955fc64e98e51bc902df38b986eb6dd34d150528bfc1823380c44a3bc5&hash[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?x=%25&y=%252G&until=4000000000&hash=f16233955fc64e98e51bc902df38b986eb6dd34d150528bfc1823380c44a3bc5&until=1e10",
+        "HTTPS://MyApp.com:443/a/../b?x=%25&y=%252G&until=4000000000&hash=f16233955fc64e98e51bc902df38b986eb6dd34d150528bfc1823380c44a3bc5#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?flag&&empty=",
+      "key": "random_monkey",
+      "override_key": "custom-key",
+      "expires_name": "expires",
+      "signature_name": "signature",
+      "md5": false,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?flag=&empty=&expires=4000000000&signature=65cf1aed7d36e2b09458f13b3b20c5bd4b2a30d247537ee35928a3f28939e169",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?flag=&empty=&expires=4000000000&signature=65cf1aed7d36e2b09458f13b3b20c5bd4b2a30d247537ee35928a3f28939e169&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?flag=&empty=&expires=4000000000&signature=65cf1aed7d36e2b09458f13b3b20c5bd4b2a30d247537ee35928a3f28939e169&signature[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?flag=&empty=&expires=4000000000&signature=65cf1aed7d36e2b09458f13b3b20c5bd4b2a30d247537ee35928a3f28939e169&expires=1e10",
+        "HTTPS://MyApp.com:443/a/../b?flag=&empty=&expires=4000000000&signature=65cf1aed7d36e2b09458f13b3b20c5bd4b2a30d247537ee35928a3f28939e169#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?expires=3&signature=old&foo=bar",
+      "key": "random_monkey",
+      "override_key": null,
+      "expires_name": "until",
+      "signature_name": "hash",
+      "md5": false,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?expires=3&signature=old&foo=bar&until=4000000000&hash=c818be71985659183baada624ab0e3f1805ea0aef1631c17f69d8cde58862abd",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?expires=3&signature=old&foo=bar&until=4000000000&hash=c818be71985659183baada624ab0e3f1805ea0aef1631c17f69d8cde58862abd&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?expires=3&signature=old&foo=bar&until=4000000000&hash=c818be71985659183baada624ab0e3f1805ea0aef1631c17f69d8cde58862abd&hash[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?expires=3&signature=old&foo=bar&until=4000000000&hash=c818be71985659183baada624ab0e3f1805ea0aef1631c17f69d8cde58862abd&until=1e10",
+        "HTTPS://MyApp.com:443/a/../b?expires=3&signature=old&foo=bar&until=4000000000&hash=c818be71985659183baada624ab0e3f1805ea0aef1631c17f69d8cde58862abd#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b#fragment",
+      "key": "random_monkey",
+      "override_key": "",
+      "expires_name": "expires",
+      "signature_name": "signature",
+      "md5": false,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b#fragment?expires=4000000000&signature=1b1fda506ae9129ed7eadfd95b03e67249563e487cfbba25253b17180363baa8",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b#fragment?expires=4000000000&signature=1b1fda506ae9129ed7eadfd95b03e67249563e487cfbba25253b17180363baa8&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b#fragment?expires=4000000000&signature=1b1fda506ae9129ed7eadfd95b03e67249563e487cfbba25253b17180363baa8&signature[]=bad",
+        "HTTPS://MyApp.com:443/a/../b#fragment?expires=4000000000&signature=1b1fda506ae9129ed7eadfd95b03e67249563e487cfbba25253b17180363baa8&expires=1e10",
+        "HTTPS://MyApp.com:443/a/../b#fragment?expires=4000000000&signature=1b1fda506ae9129ed7eadfd95b03e67249563e487cfbba25253b17180363baa8#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?x=value#fragment",
+      "key": "random_monkey",
+      "override_key": "custom-key",
+      "expires_name": "until",
+      "signature_name": "hash",
+      "md5": false,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?x=value%23fragment&until=4000000000&hash=69ef583988b49263d6b19d38ed8269f892771b9dfe783feace398e754b3fb368",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?x=value%23fragment&until=4000000000&hash=69ef583988b49263d6b19d38ed8269f892771b9dfe783feace398e754b3fb368&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?x=value%23fragment&until=4000000000&hash=69ef583988b49263d6b19d38ed8269f892771b9dfe783feace398e754b3fb368&hash[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?x=value%23fragment&until=4000000000&hash=69ef583988b49263d6b19d38ed8269f892771b9dfe783feace398e754b3fb368&until=1e10",
+        "HTTPS://MyApp.com:443/a/../b?x=value%23fragment&until=4000000000&hash=69ef583988b49263d6b19d38ed8269f892771b9dfe783feace398e754b3fb368#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b#before?x=after",
+      "key": "random_monkey",
+      "override_key": null,
+      "expires_name": "expires",
+      "signature_name": "signature",
+      "md5": false,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b#before?x=after&expires=4000000000&signature=743bd76188c56b9ab14511b894de3d568f99b41d2a02a1fbe6274d7ac1680b82",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b#before?x=after&expires=4000000000&signature=743bd76188c56b9ab14511b894de3d568f99b41d2a02a1fbe6274d7ac1680b82&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b#before?x=after&expires=4000000000&signature=743bd76188c56b9ab14511b894de3d568f99b41d2a02a1fbe6274d7ac1680b82&signature[]=bad",
+        "HTTPS://MyApp.com:443/a/../b#before?x=after&expires=4000000000&signature=743bd76188c56b9ab14511b894de3d568f99b41d2a02a1fbe6274d7ac1680b82&expires=1e10",
+        "HTTPS://MyApp.com:443/a/../b#before?x=after&expires=4000000000&signature=743bd76188c56b9ab14511b894de3d568f99b41d2a02a1fbe6274d7ac1680b82#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?0=a&5=b&-1=c",
+      "key": "random_monkey",
+      "override_key": "",
+      "expires_name": "until",
+      "signature_name": "hash",
+      "md5": false,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?0=a&1=b&2=c&until=4000000000&hash=52bc1872763fed4b96029a3fad658a426151c3934304699570989eea52494f4b",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?0=a&1=b&2=c&until=4000000000&hash=52bc1872763fed4b96029a3fad658a426151c3934304699570989eea52494f4b&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?0=a&1=b&2=c&until=4000000000&hash=52bc1872763fed4b96029a3fad658a426151c3934304699570989eea52494f4b&hash[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?0=a&1=b&2=c&until=4000000000&hash=52bc1872763fed4b96029a3fad658a426151c3934304699570989eea52494f4b&until=1e10",
+        "HTTPS://MyApp.com:443/a/../b?0=a&1=b&2=c&until=4000000000&hash=52bc1872763fed4b96029a3fad658a426151c3934304699570989eea52494f4b#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?x[-4]=a&x[]=b",
+      "key": "random_monkey",
+      "override_key": "custom-key",
+      "expires_name": "expires",
+      "signature_name": "signature",
+      "md5": false,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?x%5B-4%5D=a&x%5B-3%5D=b&expires=4000000000&signature=bf9819bae1b50606b741bdf3dfd13c4cc2472e48ba56c037e8d614b1c99eafe8",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?x%5B-4%5D=a&x%5B-3%5D=b&expires=4000000000&signature=bf9819bae1b50606b741bdf3dfd13c4cc2472e48ba56c037e8d614b1c99eafe8&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?x%5B-4%5D=a&x%5B-3%5D=b&expires=4000000000&signature=bf9819bae1b50606b741bdf3dfd13c4cc2472e48ba56c037e8d614b1c99eafe8&signature[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?x%5B-4%5D=a&x%5B-3%5D=b&expires=4000000000&signature=bf9819bae1b50606b741bdf3dfd13c4cc2472e48ba56c037e8d614b1c99eafe8&expires=1e10",
+        "HTTPS://MyApp.com:443/a/../b?x%5B-4%5D=a&x%5B-3%5D=b&expires=4000000000&signature=bf9819bae1b50606b741bdf3dfd13c4cc2472e48ba56c037e8d614b1c99eafe8#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?a[b]tail=c",
+      "key": "random_monkey",
+      "override_key": null,
+      "expires_name": "until",
+      "signature_name": "hash",
+      "md5": false,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?a%5Bb%5D=c&until=4000000000&hash=6170c13d63675b321f3e0ddb87b88c4ee77d0afc22041adc184ad3441fec7d6a",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?a%5Bb%5D=c&until=4000000000&hash=6170c13d63675b321f3e0ddb87b88c4ee77d0afc22041adc184ad3441fec7d6a&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?a%5Bb%5D=c&until=4000000000&hash=6170c13d63675b321f3e0ddb87b88c4ee77d0afc22041adc184ad3441fec7d6a&hash[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?a%5Bb%5D=c&until=4000000000&hash=6170c13d63675b321f3e0ddb87b88c4ee77d0afc22041adc184ad3441fec7d6a&until=1e10",
+        "HTTPS://MyApp.com:443/a/../b?a%5Bb%5D=c&until=4000000000&hash=6170c13d63675b321f3e0ddb87b88c4ee77d0afc22041adc184ad3441fec7d6a#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?a[=c",
+      "key": "random_monkey",
+      "override_key": "",
+      "expires_name": "expires",
+      "signature_name": "signature",
+      "md5": false,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?a_=c&expires=4000000000&signature=f8cb361841a247c5737c7c4848040246f0f6d27160d91185f9f833f818ff3825",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?a_=c&expires=4000000000&signature=f8cb361841a247c5737c7c4848040246f0f6d27160d91185f9f833f818ff3825&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?a_=c&expires=4000000000&signature=f8cb361841a247c5737c7c4848040246f0f6d27160d91185f9f833f818ff3825&signature[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?a_=c&expires=4000000000&signature=f8cb361841a247c5737c7c4848040246f0f6d27160d91185f9f833f818ff3825&expires=1e10",
+        "HTTPS://MyApp.com:443/a/../b?a_=c&expires=4000000000&signature=f8cb361841a247c5737c7c4848040246f0f6d27160d91185f9f833f818ff3825#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?a[b][=c",
+      "key": "random_monkey",
+      "override_key": "custom-key",
+      "expires_name": "until",
+      "signature_name": "hash",
+      "md5": false,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?a%5Bb%5D=c&until=4000000000&hash=5f0273c054695532545e720c511ccae506522f232172bce737de07f817c4c153",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?a%5Bb%5D=c&until=4000000000&hash=5f0273c054695532545e720c511ccae506522f232172bce737de07f817c4c153&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?a%5Bb%5D=c&until=4000000000&hash=5f0273c054695532545e720c511ccae506522f232172bce737de07f817c4c153&hash[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?a%5Bb%5D=c&until=4000000000&hash=5f0273c054695532545e720c511ccae506522f232172bce737de07f817c4c153&until=1e10",
+        "HTTPS://MyApp.com:443/a/../b?a%5Bb%5D=c&until=4000000000&hash=5f0273c054695532545e720c511ccae506522f232172bce737de07f817c4c153#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?a[ ]=a&a[  ]=b",
+      "key": "random_monkey",
+      "override_key": null,
+      "expires_name": "expires",
+      "signature_name": "signature",
+      "md5": false,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?a%5B0%5D=a&a%5B++%5D=b&expires=4000000000&signature=914c0760c7d3a182bdfc23f6769ca44d62f1cb6412537ff8e01323439e0f925a",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?a%5B0%5D=a&a%5B++%5D=b&expires=4000000000&signature=914c0760c7d3a182bdfc23f6769ca44d62f1cb6412537ff8e01323439e0f925a&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?a%5B0%5D=a&a%5B++%5D=b&expires=4000000000&signature=914c0760c7d3a182bdfc23f6769ca44d62f1cb6412537ff8e01323439e0f925a&signature[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?a%5B0%5D=a&a%5B++%5D=b&expires=4000000000&signature=914c0760c7d3a182bdfc23f6769ca44d62f1cb6412537ff8e01323439e0f925a&expires=1e10",
+        "HTTPS://MyApp.com:443/a/../b?a%5B0%5D=a&a%5B++%5D=b&expires=4000000000&signature=914c0760c7d3a182bdfc23f6769ca44d62f1cb6412537ff8e01323439e0f925a#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?%00a=b&a%00b=c",
+      "key": "random_monkey",
+      "override_key": "",
+      "expires_name": "until",
+      "signature_name": "hash",
+      "md5": false,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?a=c&until=4000000000&hash=26de666884234ef16e47cca4ae3cf0a1aa4751aa629d7c622303f9e850c05510",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?a=c&until=4000000000&hash=26de666884234ef16e47cca4ae3cf0a1aa4751aa629d7c622303f9e850c05510&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?a=c&until=4000000000&hash=26de666884234ef16e47cca4ae3cf0a1aa4751aa629d7c622303f9e850c05510&hash[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?a=c&until=4000000000&hash=26de666884234ef16e47cca4ae3cf0a1aa4751aa629d7c622303f9e850c05510&until=1e10",
+        "HTTPS://MyApp.com:443/a/../b?a=c&until=4000000000&hash=26de666884234ef16e47cca4ae3cf0a1aa4751aa629d7c622303f9e850c05510#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b",
+      "key": "random_monkey",
+      "override_key": null,
+      "expires_name": "until",
+      "signature_name": "hash",
+      "md5": true,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?until=4000000000&hash=8d1dd0b09c20ca1e9a824012dbbf7a95",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?until=4000000000&hash=8d1dd0b09c20ca1e9a824012dbbf7a95&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?until=4000000000&hash=8d1dd0b09c20ca1e9a824012dbbf7a95&hash[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?until=4000000000&hash=8d1dd0b09c20ca1e9a824012dbbf7a95&until=1e10",
+        "HTTPS://MyApp.com:443/a/../b?until=4000000000&hash=8d1dd0b09c20ca1e9a824012dbbf7a95#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?",
+      "key": "random_monkey",
+      "override_key": "",
+      "expires_name": "expires",
+      "signature_name": "signature",
+      "md5": true,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?expires=4000000000&signature=f43baf540a2c0f112af90884c9696a80",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?expires=4000000000&signature=f43baf540a2c0f112af90884c9696a80&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?expires=4000000000&signature=f43baf540a2c0f112af90884c9696a80&signature[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?expires=4000000000&signature=f43baf540a2c0f112af90884c9696a80&expires=1e10",
+        "HTTPS://MyApp.com:443/a/../b?expires=4000000000&signature=f43baf540a2c0f112af90884c9696a80#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?foo=bar&baz=qux",
+      "key": "random_monkey",
+      "override_key": "custom-key",
+      "expires_name": "until",
+      "signature_name": "hash",
+      "md5": true,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?foo=bar&baz=qux&until=4000000000&hash=e6bd90c72643a5240478f43713712574",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?foo=bar&baz=qux&until=4000000000&hash=e6bd90c72643a5240478f43713712574&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?foo=bar&baz=qux&until=4000000000&hash=e6bd90c72643a5240478f43713712574&hash[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?foo=bar&baz=qux&until=4000000000&hash=e6bd90c72643a5240478f43713712574&until=1e10",
+        "HTTPS://MyApp.com:443/a/../b?foo=bar&baz=qux&until=4000000000&hash=e6bd90c72643a5240478f43713712574#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?x=a%20b&y=a+b&z=%2B",
+      "key": "random_monkey",
+      "override_key": null,
+      "expires_name": "expires",
+      "signature_name": "signature",
+      "md5": true,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?x=a+b&y=a+b&z=%2B&expires=4000000000&signature=fd271517f01d120337de2db1f8d427f6",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?x=a+b&y=a+b&z=%2B&expires=4000000000&signature=fd271517f01d120337de2db1f8d427f6&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?x=a+b&y=a+b&z=%2B&expires=4000000000&signature=fd271517f01d120337de2db1f8d427f6&signature[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?x=a+b&y=a+b&z=%2B&expires=4000000000&signature=fd271517f01d120337de2db1f8d427f6&expires=1e10",
+        "HTTPS://MyApp.com:443/a/../b?x=a+b&y=a+b&z=%2B&expires=4000000000&signature=fd271517f01d120337de2db1f8d427f6#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?x=~!*'()@:/?=\u00e9",
+      "key": "random_monkey",
+      "override_key": "",
+      "expires_name": "until",
+      "signature_name": "hash",
+      "md5": true,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?x=%7E%21%2A%27%28%29%40%3A%2F%3F%3D%C3%A9&until=4000000000&hash=298fb7f854eef19d93c8605048541a03",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?x=%7E%21%2A%27%28%29%40%3A%2F%3F%3D%C3%A9&until=4000000000&hash=298fb7f854eef19d93c8605048541a03&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?x=%7E%21%2A%27%28%29%40%3A%2F%3F%3D%C3%A9&until=4000000000&hash=298fb7f854eef19d93c8605048541a03&hash[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?x=%7E%21%2A%27%28%29%40%3A%2F%3F%3D%C3%A9&until=4000000000&hash=298fb7f854eef19d93c8605048541a03&until=1e10",
+        "HTTPS://MyApp.com:443/a/../b?x=%7E%21%2A%27%28%29%40%3A%2F%3F%3D%C3%A9&until=4000000000&hash=298fb7f854eef19d93c8605048541a03#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?x=first&y=middle&x=last",
+      "key": "random_monkey",
+      "override_key": "custom-key",
+      "expires_name": "expires",
+      "signature_name": "signature",
+      "md5": true,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?x=last&y=middle&expires=4000000000&signature=2f9fb8e127d7c93d939227fbd3f600ac",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?x=last&y=middle&expires=4000000000&signature=2f9fb8e127d7c93d939227fbd3f600ac&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?x=last&y=middle&expires=4000000000&signature=2f9fb8e127d7c93d939227fbd3f600ac&signature[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?x=last&y=middle&expires=4000000000&signature=2f9fb8e127d7c93d939227fbd3f600ac&expires=1e10",
+        "HTTPS://MyApp.com:443/a/../b?x=last&y=middle&expires=4000000000&signature=2f9fb8e127d7c93d939227fbd3f600ac#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?x[]=a&x[]=b",
+      "key": "random_monkey",
+      "override_key": null,
+      "expires_name": "until",
+      "signature_name": "hash",
+      "md5": true,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?x%5B0%5D=a&x%5B1%5D=b&until=4000000000&hash=63fa746d3a13f9e64797756902154009",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?x%5B0%5D=a&x%5B1%5D=b&until=4000000000&hash=63fa746d3a13f9e64797756902154009&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?x%5B0%5D=a&x%5B1%5D=b&until=4000000000&hash=63fa746d3a13f9e64797756902154009&hash[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?x%5B0%5D=a&x%5B1%5D=b&until=4000000000&hash=63fa746d3a13f9e64797756902154009&until=1e10",
+        "HTTPS://MyApp.com:443/a/../b?x%5B0%5D=a&x%5B1%5D=b&until=4000000000&hash=63fa746d3a13f9e64797756902154009#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?x[a][b]=c&x[a][d]=e",
+      "key": "random_monkey",
+      "override_key": "",
+      "expires_name": "expires",
+      "signature_name": "signature",
+      "md5": true,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?x%5Ba%5D%5Bb%5D=c&x%5Ba%5D%5Bd%5D=e&expires=4000000000&signature=d90caf9e947ed62c8e5a1ad461910d9e",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?x%5Ba%5D%5Bb%5D=c&x%5Ba%5D%5Bd%5D=e&expires=4000000000&signature=d90caf9e947ed62c8e5a1ad461910d9e&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?x%5Ba%5D%5Bb%5D=c&x%5Ba%5D%5Bd%5D=e&expires=4000000000&signature=d90caf9e947ed62c8e5a1ad461910d9e&signature[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?x%5Ba%5D%5Bb%5D=c&x%5Ba%5D%5Bd%5D=e&expires=4000000000&signature=d90caf9e947ed62c8e5a1ad461910d9e&expires=1e10",
+        "HTTPS://MyApp.com:443/a/../b?x%5Ba%5D%5Bb%5D=c&x%5Ba%5D%5Bd%5D=e&expires=4000000000&signature=d90caf9e947ed62c8e5a1ad461910d9e#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?a.b=one&a+b=two",
+      "key": "random_monkey",
+      "override_key": "custom-key",
+      "expires_name": "until",
+      "signature_name": "hash",
+      "md5": true,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?a_b=two&until=4000000000&hash=582d8ad5a75257f7a0b6f6912532120f",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?a_b=two&until=4000000000&hash=582d8ad5a75257f7a0b6f6912532120f&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?a_b=two&until=4000000000&hash=582d8ad5a75257f7a0b6f6912532120f&hash[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?a_b=two&until=4000000000&hash=582d8ad5a75257f7a0b6f6912532120f&until=1e10",
+        "HTTPS://MyApp.com:443/a/../b?a_b=two&until=4000000000&hash=582d8ad5a75257f7a0b6f6912532120f#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?x=%FF%00%FE&%FF=bytes",
+      "key": "random_monkey",
+      "override_key": null,
+      "expires_name": "expires",
+      "signature_name": "signature",
+      "md5": true,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?x=%FF%00%FE&%FF=bytes&expires=4000000000&signature=d9d955b3f9f9efaca5bbe4f9e8216938",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?x=%FF%00%FE&%FF=bytes&expires=4000000000&signature=d9d955b3f9f9efaca5bbe4f9e8216938&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?x=%FF%00%FE&%FF=bytes&expires=4000000000&signature=d9d955b3f9f9efaca5bbe4f9e8216938&signature[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?x=%FF%00%FE&%FF=bytes&expires=4000000000&signature=d9d955b3f9f9efaca5bbe4f9e8216938&expires=1e10",
+        "HTTPS://MyApp.com:443/a/../b?x=%FF%00%FE&%FF=bytes&expires=4000000000&signature=d9d955b3f9f9efaca5bbe4f9e8216938#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?x=%&y=%2G",
+      "key": "random_monkey",
+      "override_key": "",
+      "expires_name": "until",
+      "signature_name": "hash",
+      "md5": true,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?x=%25&y=%252G&until=4000000000&hash=d33e321089847ce9cd5caf2ebe7c0c64",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?x=%25&y=%252G&until=4000000000&hash=d33e321089847ce9cd5caf2ebe7c0c64&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?x=%25&y=%252G&until=4000000000&hash=d33e321089847ce9cd5caf2ebe7c0c64&hash[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?x=%25&y=%252G&until=4000000000&hash=d33e321089847ce9cd5caf2ebe7c0c64&until=1e10",
+        "HTTPS://MyApp.com:443/a/../b?x=%25&y=%252G&until=4000000000&hash=d33e321089847ce9cd5caf2ebe7c0c64#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?flag&&empty=",
+      "key": "random_monkey",
+      "override_key": "custom-key",
+      "expires_name": "expires",
+      "signature_name": "signature",
+      "md5": true,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?flag=&empty=&expires=4000000000&signature=b7847a71e0b3f5e658f1c9e60ed791cc",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?flag=&empty=&expires=4000000000&signature=b7847a71e0b3f5e658f1c9e60ed791cc&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?flag=&empty=&expires=4000000000&signature=b7847a71e0b3f5e658f1c9e60ed791cc&signature[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?flag=&empty=&expires=4000000000&signature=b7847a71e0b3f5e658f1c9e60ed791cc&expires=1e10",
+        "HTTPS://MyApp.com:443/a/../b?flag=&empty=&expires=4000000000&signature=b7847a71e0b3f5e658f1c9e60ed791cc#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?expires=3&signature=old&foo=bar",
+      "key": "random_monkey",
+      "override_key": null,
+      "expires_name": "until",
+      "signature_name": "hash",
+      "md5": true,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?expires=3&signature=old&foo=bar&until=4000000000&hash=758b6948bc95938ca927c0a3a02cb8bf",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?expires=3&signature=old&foo=bar&until=4000000000&hash=758b6948bc95938ca927c0a3a02cb8bf&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?expires=3&signature=old&foo=bar&until=4000000000&hash=758b6948bc95938ca927c0a3a02cb8bf&hash[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?expires=3&signature=old&foo=bar&until=4000000000&hash=758b6948bc95938ca927c0a3a02cb8bf&until=1e10",
+        "HTTPS://MyApp.com:443/a/../b?expires=3&signature=old&foo=bar&until=4000000000&hash=758b6948bc95938ca927c0a3a02cb8bf#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b#fragment",
+      "key": "random_monkey",
+      "override_key": "",
+      "expires_name": "expires",
+      "signature_name": "signature",
+      "md5": true,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b#fragment?expires=4000000000&signature=90e0cb6c60b50c11e9ac304de154897f",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b#fragment?expires=4000000000&signature=90e0cb6c60b50c11e9ac304de154897f&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b#fragment?expires=4000000000&signature=90e0cb6c60b50c11e9ac304de154897f&signature[]=bad",
+        "HTTPS://MyApp.com:443/a/../b#fragment?expires=4000000000&signature=90e0cb6c60b50c11e9ac304de154897f&expires=1e10",
+        "HTTPS://MyApp.com:443/a/../b#fragment?expires=4000000000&signature=90e0cb6c60b50c11e9ac304de154897f#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?x=value#fragment",
+      "key": "random_monkey",
+      "override_key": "custom-key",
+      "expires_name": "until",
+      "signature_name": "hash",
+      "md5": true,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?x=value%23fragment&until=4000000000&hash=4f1891489eb489dc599b264f17de3df6",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?x=value%23fragment&until=4000000000&hash=4f1891489eb489dc599b264f17de3df6&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?x=value%23fragment&until=4000000000&hash=4f1891489eb489dc599b264f17de3df6&hash[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?x=value%23fragment&until=4000000000&hash=4f1891489eb489dc599b264f17de3df6&until=1e10",
+        "HTTPS://MyApp.com:443/a/../b?x=value%23fragment&until=4000000000&hash=4f1891489eb489dc599b264f17de3df6#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b#before?x=after",
+      "key": "random_monkey",
+      "override_key": null,
+      "expires_name": "expires",
+      "signature_name": "signature",
+      "md5": true,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b#before?x=after&expires=4000000000&signature=d0fe89d8fdcdd4f0993371dccb86dab5",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b#before?x=after&expires=4000000000&signature=d0fe89d8fdcdd4f0993371dccb86dab5&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b#before?x=after&expires=4000000000&signature=d0fe89d8fdcdd4f0993371dccb86dab5&signature[]=bad",
+        "HTTPS://MyApp.com:443/a/../b#before?x=after&expires=4000000000&signature=d0fe89d8fdcdd4f0993371dccb86dab5&expires=1e10",
+        "HTTPS://MyApp.com:443/a/../b#before?x=after&expires=4000000000&signature=d0fe89d8fdcdd4f0993371dccb86dab5#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?0=a&5=b&-1=c",
+      "key": "random_monkey",
+      "override_key": "",
+      "expires_name": "until",
+      "signature_name": "hash",
+      "md5": true,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?0=a&1=b&2=c&until=4000000000&hash=3a8f03cd3c9c7653b7b4e787a22db7f5",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?0=a&1=b&2=c&until=4000000000&hash=3a8f03cd3c9c7653b7b4e787a22db7f5&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?0=a&1=b&2=c&until=4000000000&hash=3a8f03cd3c9c7653b7b4e787a22db7f5&hash[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?0=a&1=b&2=c&until=4000000000&hash=3a8f03cd3c9c7653b7b4e787a22db7f5&until=1e10",
+        "HTTPS://MyApp.com:443/a/../b?0=a&1=b&2=c&until=4000000000&hash=3a8f03cd3c9c7653b7b4e787a22db7f5#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?x[-4]=a&x[]=b",
+      "key": "random_monkey",
+      "override_key": "custom-key",
+      "expires_name": "expires",
+      "signature_name": "signature",
+      "md5": true,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?x%5B-4%5D=a&x%5B-3%5D=b&expires=4000000000&signature=163326455e9ee4be219e0399668dbb6e",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?x%5B-4%5D=a&x%5B-3%5D=b&expires=4000000000&signature=163326455e9ee4be219e0399668dbb6e&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?x%5B-4%5D=a&x%5B-3%5D=b&expires=4000000000&signature=163326455e9ee4be219e0399668dbb6e&signature[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?x%5B-4%5D=a&x%5B-3%5D=b&expires=4000000000&signature=163326455e9ee4be219e0399668dbb6e&expires=1e10",
+        "HTTPS://MyApp.com:443/a/../b?x%5B-4%5D=a&x%5B-3%5D=b&expires=4000000000&signature=163326455e9ee4be219e0399668dbb6e#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?a[b]tail=c",
+      "key": "random_monkey",
+      "override_key": null,
+      "expires_name": "until",
+      "signature_name": "hash",
+      "md5": true,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?a%5Bb%5D=c&until=4000000000&hash=7d600865bfef838856f3b67ceb32f6b7",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?a%5Bb%5D=c&until=4000000000&hash=7d600865bfef838856f3b67ceb32f6b7&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?a%5Bb%5D=c&until=4000000000&hash=7d600865bfef838856f3b67ceb32f6b7&hash[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?a%5Bb%5D=c&until=4000000000&hash=7d600865bfef838856f3b67ceb32f6b7&until=1e10",
+        "HTTPS://MyApp.com:443/a/../b?a%5Bb%5D=c&until=4000000000&hash=7d600865bfef838856f3b67ceb32f6b7#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?a[=c",
+      "key": "random_monkey",
+      "override_key": "",
+      "expires_name": "expires",
+      "signature_name": "signature",
+      "md5": true,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?a_=c&expires=4000000000&signature=cbc1919d2cf18ffda59ff2c688229ccf",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?a_=c&expires=4000000000&signature=cbc1919d2cf18ffda59ff2c688229ccf&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?a_=c&expires=4000000000&signature=cbc1919d2cf18ffda59ff2c688229ccf&signature[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?a_=c&expires=4000000000&signature=cbc1919d2cf18ffda59ff2c688229ccf&expires=1e10",
+        "HTTPS://MyApp.com:443/a/../b?a_=c&expires=4000000000&signature=cbc1919d2cf18ffda59ff2c688229ccf#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?a[b][=c",
+      "key": "random_monkey",
+      "override_key": "custom-key",
+      "expires_name": "until",
+      "signature_name": "hash",
+      "md5": true,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?a%5Bb%5D=c&until=4000000000&hash=57932d38db9de2517bde2e03c7b2f775",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?a%5Bb%5D=c&until=4000000000&hash=57932d38db9de2517bde2e03c7b2f775&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?a%5Bb%5D=c&until=4000000000&hash=57932d38db9de2517bde2e03c7b2f775&hash[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?a%5Bb%5D=c&until=4000000000&hash=57932d38db9de2517bde2e03c7b2f775&until=1e10",
+        "HTTPS://MyApp.com:443/a/../b?a%5Bb%5D=c&until=4000000000&hash=57932d38db9de2517bde2e03c7b2f775#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?a[ ]=a&a[  ]=b",
+      "key": "random_monkey",
+      "override_key": null,
+      "expires_name": "expires",
+      "signature_name": "signature",
+      "md5": true,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?a%5B0%5D=a&a%5B++%5D=b&expires=4000000000&signature=eeb3f8d52e43da831afa03ee2124b146",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?a%5B0%5D=a&a%5B++%5D=b&expires=4000000000&signature=eeb3f8d52e43da831afa03ee2124b146&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?a%5B0%5D=a&a%5B++%5D=b&expires=4000000000&signature=eeb3f8d52e43da831afa03ee2124b146&signature[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?a%5B0%5D=a&a%5B++%5D=b&expires=4000000000&signature=eeb3f8d52e43da831afa03ee2124b146&expires=1e10",
+        "HTTPS://MyApp.com:443/a/../b?a%5B0%5D=a&a%5B++%5D=b&expires=4000000000&signature=eeb3f8d52e43da831afa03ee2124b146#fragment"
+      ]
+    },
+    {
+      "url": "HTTPS://MyApp.com:443/a/../b?%00a=b&a%00b=c",
+      "key": "random_monkey",
+      "override_key": "",
+      "expires_name": "until",
+      "signature_name": "hash",
+      "md5": true,
+      "now": 1700000000,
+      "expiration": 4000000000,
+      "rust_signed": "HTTPS://MyApp.com:443/a/../b?a=c&until=4000000000&hash=3f4d8496a9c0234aeadef5c34495cde5",
+      "checks": [
+        "HTTPS://MyApp.com:443/a/../b?a=c&until=4000000000&hash=3f4d8496a9c0234aeadef5c34495cde5&tampered=1",
+        "HTTPS://MyApp.com:443/a/../b?a=c&until=4000000000&hash=3f4d8496a9c0234aeadef5c34495cde5&hash[]=bad",
+        "HTTPS://MyApp.com:443/a/../b?a=c&until=4000000000&hash=3f4d8496a9c0234aeadef5c34495cde5&until=1e10",
+        "HTTPS://MyApp.com:443/a/../b?a=c&until=4000000000&hash=3f4d8496a9c0234aeadef5c34495cde5#fragment"
+      ]
+    }
+  ],
+  [
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?until=4000000000&hash=f4c8befea66a5d54b1099ac0f9bd7e96b0b7f171ecdb36282094015c9fb18e09",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?expires=4000000000&signature=567aa01514431d4d9116932865205f42b5e9f26d7fbd63bbbab5582f32e07add",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?foo=bar&baz=qux&until=4000000000&hash=92fcf900c730c120944f7599631380e5e65f9a9f6fe586f0d0c3aa7a0d3f8fbb",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?x=a+b&y=a+b&z=%2B&expires=4000000000&signature=49abe4e6a14067b0d1ae315da13d153a36a44e25a640835304099840157123d5",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?x=%7E%21%2A%27%28%29%40%3A%2F%3F%3D%C3%A9&until=4000000000&hash=cc47fac3070f84cd6c62c031cd5cbb5a336c0f9591aeb00485a1a4b9b5147557",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?x=last&y=middle&expires=4000000000&signature=21043585a41c40c44482aa9695976fdab80d8bf58a39d5b0536fde445764ddf8",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?x%5B0%5D=a&x%5B1%5D=b&until=4000000000&hash=0fe30d11f20d77541a749119d587a38b3d4cbad2f05fdc2e5d35ed45bae954ef",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?x%5Ba%5D%5Bb%5D=c&x%5Ba%5D%5Bd%5D=e&expires=4000000000&signature=8d29e1f9fa9b7b8cbe788fcdaf7fa73cfd057c048454d20c882e1a3866c87f2d",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?a_b=two&until=4000000000&hash=e80176b8ff81ae58063737ba911eb407ff5459d04bc4691277f031d5d54d6ba5",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?x=%FF%00%FE&%FF=bytes&expires=4000000000&signature=c0068aa3b848fcef33bb74a9dc0104d3cb9a3d3b03bedc1d30310ba2f9512752",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?x=%25&y=%252G&until=4000000000&hash=f16233955fc64e98e51bc902df38b986eb6dd34d150528bfc1823380c44a3bc5",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?flag=&empty=&expires=4000000000&signature=65cf1aed7d36e2b09458f13b3b20c5bd4b2a30d247537ee35928a3f28939e169",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?expires=3&signature=old&foo=bar&until=4000000000&hash=c818be71985659183baada624ab0e3f1805ea0aef1631c17f69d8cde58862abd",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b#fragment?expires=4000000000&signature=1b1fda506ae9129ed7eadfd95b03e67249563e487cfbba25253b17180363baa8",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?x=value%23fragment&until=4000000000&hash=69ef583988b49263d6b19d38ed8269f892771b9dfe783feace398e754b3fb368",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b#before?x=after&expires=4000000000&signature=743bd76188c56b9ab14511b894de3d568f99b41d2a02a1fbe6274d7ac1680b82",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?0=a&1=b&2=c&until=4000000000&hash=52bc1872763fed4b96029a3fad658a426151c3934304699570989eea52494f4b",
+      "validation": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?x%5B-4%5D=a&x%5B-3%5D=b&expires=4000000000&signature=bf9819bae1b50606b741bdf3dfd13c4cc2472e48ba56c037e8d614b1c99eafe8",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?a%5Bb%5D=c&until=4000000000&hash=6170c13d63675b321f3e0ddb87b88c4ee77d0afc22041adc184ad3441fec7d6a",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?a_=c&expires=4000000000&signature=f8cb361841a247c5737c7c4848040246f0f6d27160d91185f9f833f818ff3825",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?a%5Bb%5D=c&until=4000000000&hash=5f0273c054695532545e720c511ccae506522f232172bce737de07f817c4c153",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?a%5B0%5D=a&a%5B++%5D=b&expires=4000000000&signature=914c0760c7d3a182bdfc23f6769ca44d62f1cb6412537ff8e01323439e0f925a",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?a=c&until=4000000000&hash=26de666884234ef16e47cca4ae3cf0a1aa4751aa629d7c622303f9e850c05510",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?until=4000000000&hash=8d1dd0b09c20ca1e9a824012dbbf7a95",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?expires=4000000000&signature=f43baf540a2c0f112af90884c9696a80",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?foo=bar&baz=qux&until=4000000000&hash=e6bd90c72643a5240478f43713712574",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?x=a+b&y=a+b&z=%2B&expires=4000000000&signature=fd271517f01d120337de2db1f8d427f6",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?x=%7E%21%2A%27%28%29%40%3A%2F%3F%3D%C3%A9&until=4000000000&hash=298fb7f854eef19d93c8605048541a03",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?x=last&y=middle&expires=4000000000&signature=2f9fb8e127d7c93d939227fbd3f600ac",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?x%5B0%5D=a&x%5B1%5D=b&until=4000000000&hash=63fa746d3a13f9e64797756902154009",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?x%5Ba%5D%5Bb%5D=c&x%5Ba%5D%5Bd%5D=e&expires=4000000000&signature=d90caf9e947ed62c8e5a1ad461910d9e",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?a_b=two&until=4000000000&hash=582d8ad5a75257f7a0b6f6912532120f",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?x=%FF%00%FE&%FF=bytes&expires=4000000000&signature=d9d955b3f9f9efaca5bbe4f9e8216938",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?x=%25&y=%252G&until=4000000000&hash=d33e321089847ce9cd5caf2ebe7c0c64",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?flag=&empty=&expires=4000000000&signature=b7847a71e0b3f5e658f1c9e60ed791cc",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?expires=3&signature=old&foo=bar&until=4000000000&hash=758b6948bc95938ca927c0a3a02cb8bf",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b#fragment?expires=4000000000&signature=90e0cb6c60b50c11e9ac304de154897f",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?x=value%23fragment&until=4000000000&hash=4f1891489eb489dc599b264f17de3df6",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b#before?x=after&expires=4000000000&signature=d0fe89d8fdcdd4f0993371dccb86dab5",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?0=a&1=b&2=c&until=4000000000&hash=3a8f03cd3c9c7653b7b4e787a22db7f5",
+      "validation": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?x%5B-4%5D=a&x%5B-3%5D=b&expires=4000000000&signature=163326455e9ee4be219e0399668dbb6e",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?a%5Bb%5D=c&until=4000000000&hash=7d600865bfef838856f3b67ceb32f6b7",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?a_=c&expires=4000000000&signature=cbc1919d2cf18ffda59ff2c688229ccf",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?a%5Bb%5D=c&until=4000000000&hash=57932d38db9de2517bde2e03c7b2f775",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?a%5B0%5D=a&a%5B++%5D=b&expires=4000000000&signature=eeb3f8d52e43da831afa03ee2124b146",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "signed": "HTTPS://MyApp.com:443/a/../b?a=c&until=4000000000&hash=3f4d8496a9c0234aeadef5c34495cde5",
+      "validation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    }
+  ]
+]

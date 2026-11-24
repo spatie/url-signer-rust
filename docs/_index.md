@@ -1,6 +1,6 @@
 ---
 title: v1
-slogan: {{description_quoted}}
-githubUrl: https://github.com/{{owner}}/{{repository}}
+slogan: "Create signed URLs with a limited lifetime"
+githubUrl: https://github.com/spatie/url-signer-rust
 branch: main
 ---
