@@ -129,6 +129,8 @@ Use named top-level query keys. Integer keys are renumbered when the signing par
 
 For links shared with [spatie/url-signer](https://github.com/spatie/url-signer), use 64-bit PHP 8.3+ with `arg_separator.input=&`, `arg_separator.output=&`, `max_input_vars=1000`, and `max_input_nesting_level=64`. PHP 8.2 assigns different appended array indices after negative keys; use explicit nonnegative indices for links shared with that runtime. Changing PHP's INI settings can change signatures. Rust strings must be UTF-8; percent-encoded arbitrary query bytes are preserved, but raw non-UTF-8 URL/key input is not representable.
 
+<a id="testing-the-expiry-boundary"></a>
+
 ## Testing the expiry boundary
 
 Use `with_clock` to supply a clock returning Unix seconds. Production signers use the system clock.
