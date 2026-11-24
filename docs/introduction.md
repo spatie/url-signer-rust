@@ -34,6 +34,6 @@ assert!(url_signer.validate(&signed_url));
 # }
 ```
 
-The signatures and query formatting match the [PHP package](https://github.com/spatie/url-signer). You can sign in PHP and validate in Rust, or sign in Rust and validate in PHP. See [usage](usage.md) for normalization rules and the compatibility tests.
+You can share signed links with applications using [spatie/url-signer](https://github.com/spatie/url-signer). See [usage](usage.md) for URL normalization and the runtime settings needed for shared links.
 
 Continue with [installation](installation-and-setup.md).

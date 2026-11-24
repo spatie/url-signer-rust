@@ -11,4 +11,4 @@ Add the package to your application:
 cargo add spatie-url-signer
 ```
 
-PHP is not required to use the crate. It is only needed to run the differential interoperability tests.
+The crate runs without external programs or services.
