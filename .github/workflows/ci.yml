@@ -1,0 +1,84 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  RUSTFLAGS: -D warnings
+  RUSTDOCFLAGS: -D warnings
+
+jobs:
+  test:
+    name: Stable / ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v7
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - uses: actions/setup-python@v6
+        if: hashFiles('configure.py') != ''
+        with:
+          python-version: '3.11'
+      - name: Test template configurator
+        if: hashFiles('configure.py') != ''
+        run: python -m unittest discover -s tests -p 'test_configure.py' -v
+      - name: Configure template sample
+        if: hashFiles('configure.py') != ''
+        run: |
+          python configure.py --defaults --no-check
+          cargo generate-lockfile
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo fmt --all -- --check
+      - run: cargo clippy --locked --all-targets --all-features -- -D warnings
+      - run: cargo test --locked --all-targets --all-features
+      - run: cargo test --locked --doc --all-features
+      - run: cargo doc --locked --no-deps --all-features
+      - run: cargo package --locked --allow-dirty
+
+  msrv:
+    name: MSRV / 1.89.0
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: 1.89.0
+      - name: Configure template sample
+        if: hashFiles('configure.py') != ''
+        run: |
+          python3 configure.py --defaults --no-check
+          cargo generate-lockfile
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo +1.89.0 test --locked --all-targets --all-features
+      - run: cargo +1.89.0 test --locked --doc --all-features
+
+  audit:
+    name: Security audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Configure template sample
+        if: hashFiles('configure.py') != ''
+        run: |
+          python3 configure.py --defaults --no-check
+          cargo generate-lockfile
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo install cargo-audit --locked
+      - run: cargo audit

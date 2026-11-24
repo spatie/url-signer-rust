@@ -1,0 +1,25 @@
+[package]
+name = {{crate_name_quoted}}
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.89"
+authors = [{{author_quoted}}]
+description = {{description_quoted}}
+license = "MIT"
+repository = "https://github.com/{{owner}}/{{repository}}"
+documentation = "https://docs.rs/{{crate_name}}"
+readme = "README.md"
+keywords = ["spatie"]
+categories = ["development-tools"]
+include = ["/src/", "/tests/*.rs", "/build.rs", "/docs/", "/README.md", "/LICENSE.md", "/CHANGELOG.md", "/CONTRIBUTING.md", "/SECURITY.md", "/Cargo.lock"]
+
+[dependencies]
+
+[lints.rust]
+unsafe_code = "forbid"
+missing_docs = "warn"
+missing_debug_implementations = "warn"
+
+[profile.release]
+lto = "thin"
+strip = true
